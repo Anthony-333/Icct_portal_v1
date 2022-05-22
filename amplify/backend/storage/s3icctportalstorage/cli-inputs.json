@@ -1,0 +1,12 @@
+{
+  "resourceName": "s3icctportalstorage",
+  "bucketName": "icctportal-storage",
+  "policyUUID": "9bebb8ff",
+  "storageAccess": "auth",
+  "guestAccess": [],
+  "authAccess": [
+    "READ",
+    "CREATE_AND_UPDATE",
+    "DELETE"
+  ]
+}
