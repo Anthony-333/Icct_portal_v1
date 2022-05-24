@@ -3,7 +3,7 @@ const data = [
     title: "Aenean leo",
     body: "Ut tincidunt tincidunt erat. Sed cursus turpis vitae tortor. Quisque malesuada placerat nisl. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.",
     imgUrl:
-      "https://res.cloudinary.com/dzhvw7vxn/image/upload/v1653056964/Icct-portal/281600586_5169786759774099_215981993622866646_n_yfrojp.jpg",
+      "https://res.cloudinary.com/dzhvw7vxn/image/upload/v1653056964/Icct-portal/281600586_5169786759774099_215981993622866646_n_yfrojp.jpg" ,
   },
   {
     title: "In turpis",

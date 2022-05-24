@@ -11,105 +11,60 @@ const ProgramInformation = () => {
       <View style={{width: width}}>
         <Text style={{marginLeft: 15}}>Classification</Text>
         <CustomPicker
-          dropDownItem={[
-            {label: 'Item 1', value: '1'},
-            {label: 'Item 2', value: '2'},
-            {label: 'Item 3', value: '3'},
-            {label: 'Item 4', value: '4'},
-            {label: 'Item 5', value: '5'},
-            {label: 'Item 6', value: '6'},
-            {label: 'Item 7', value: '7'},
-            {label: 'Item 8', value: '8'},
-          ]}
+          placeholder={'- status -'}
+          disable={true}
+          dropDownItem={[{label: 'Item 1', value: '1'}]}
         />
       </View>
       <View>
         <Text style={{marginLeft: 15}}>Academic Program</Text>
         <CustomPicker
-          dropDownItem={[
-            {label: 'Item 1', value: '1'},
-            {label: 'Item 2', value: '2'},
-            {label: 'Item 3', value: '3'},
-            {label: 'Item 4', value: '4'},
-            {label: 'Item 5', value: '5'},
-            {label: 'Item 6', value: '6'},
-            {label: 'Item 7', value: '7'},
-            {label: 'Item 8', value: '8'},
-          ]}
+          placeholder={'Batchelor Programs'}
+          disable={true}
+          dropDownItem={[{label: 'Item 1', value: '1'}]}
         />
       </View>
       <View>
         <Text style={{marginLeft: 15}}>Course (First Choice)</Text>
         <CustomPicker
-          dropDownItem={[
-            {label: 'Item 1', value: '1'},
-            {label: 'Item 2', value: '2'},
-            {label: 'Item 3', value: '3'},
-            {label: 'Item 4', value: '4'},
-            {label: 'Item 5', value: '5'},
-            {label: 'Item 6', value: '6'},
-            {label: 'Item 7', value: '7'},
-            {label: 'Item 8', value: '8'},
-          ]}
+          placeholder={'BSIT - BACHELOR OF SCIENCE IN ...'}
+          disable={true}
+          dropDownItem={[{label: 'Item 1', value: '1'}]}
         />
       </View>
       <View>
         <Text style={{marginLeft: 15}}>Course (Second Choice)</Text>
         <CustomPicker
-          dropDownItem={[
-            {label: 'Item 1', value: '1'},
-            {label: 'Item 2', value: '2'},
-            {label: 'Item 3', value: '3'},
-            {label: 'Item 4', value: '4'},
-            {label: 'Item 5', value: '5'},
-            {label: 'Item 6', value: '6'},
-            {label: 'Item 7', value: '7'},
-            {label: 'Item 8', value: '8'},
-          ]}
+          placeholder={'- Second Choice -'}
+          disable={true}
+          dropDownItem={[{label: 'Item 1', value: '1'}]}
         />
       </View>
       <View>
         <Text style={{marginLeft: 15}}>Course (Third Choice)</Text>
         <CustomPicker
-          dropDownItem={[
-            {label: 'Item 1', value: '1'},
-            {label: 'Item 2', value: '2'},
-            {label: 'Item 3', value: '3'},
-            {label: 'Item 4', value: '4'},
-            {label: 'Item 5', value: '5'},
-            {label: 'Item 6', value: '6'},
-            {label: 'Item 7', value: '7'},
-            {label: 'Item 8', value: '8'},
-          ]}
+          placeholder={'- Third Choice -'}
+          disable={true}
+          dropDownItem={[{label: 'Item 1', value: '1'}]}
         />
       </View>
       <View>
         <Text style={{marginLeft: 15}}>Year Level</Text>
         <CustomPicker
+         placeholder={'Select Year '}
           dropDownItem={[
-            {label: 'Item 1', value: '1'},
-            {label: 'Item 2', value: '2'},
-            {label: 'Item 3', value: '3'},
-            {label: 'Item 4', value: '4'},
-            {label: 'Item 5', value: '5'},
-            {label: 'Item 6', value: '6'},
-            {label: 'Item 7', value: '7'},
-            {label: 'Item 8', value: '8'},
+            {label: 'First Year', value: 'First Year'},
           ]}
         />
       </View>
       <View>
         <Text style={{marginLeft: 15}}>Preferred Session</Text>
         <CustomPicker
+          placeholder={'- Select Session -'}
+          disable={true}
           dropDownItem={[
             {label: 'Item 1', value: '1'},
-            {label: 'Item 2', value: '2'},
-            {label: 'Item 3', value: '3'},
-            {label: 'Item 4', value: '4'},
-            {label: 'Item 5', value: '5'},
-            {label: 'Item 6', value: '6'},
-            {label: 'Item 7', value: '7'},
-            {label: 'Item 8', value: '8'},
+         
           ]}
         />
       </View>

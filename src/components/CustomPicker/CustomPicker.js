@@ -2,8 +2,13 @@ import React, {useState} from 'react';
 import {StyleSheet, View, Text} from 'react-native';
 import {Dropdown} from 'react-native-element-dropdown';
 
-
-const CustomPicker = ({dropDownItem, placeholder, search}) => {
+const CustomPicker = ({
+  dropDownItem,
+  placeholder,
+  search,
+  disable,
+  addStyle,
+}) => {
   const [value, setValue] = useState(null);
 
   const data = dropDownItem;
@@ -11,14 +16,19 @@ const CustomPicker = ({dropDownItem, placeholder, search}) => {
   const renderItem = item => {
     return (
       <View style={styles.item}>
-        <Text style={styles.textItem}>{item.label}</Text>
+        <Text style={styles.textItem} numberOfLines={1}>
+          {item.label}
+        </Text>
       </View>
     );
   };
 
   return (
     <Dropdown
-      style={styles.dropdown}
+      style={[
+        styles.dropdown,
+        {backgroundColor: disable ? 'lightgray' : 'white'},
+      ]}
       placeholderStyle={styles.placeholderStyle}
       selectedTextStyle={styles.selectedTextStyle}
       inputSearchStyle={styles.inputSearchStyle}
@@ -30,6 +40,7 @@ const CustomPicker = ({dropDownItem, placeholder, search}) => {
       valueField="value"
       placeholder={placeholder}
       searchPlaceholder="Search..."
+      disable={disable}
       value={value}
       onChange={item => {
         setValue(item.value) || console.log(item.value);
@@ -43,7 +54,6 @@ const styles = StyleSheet.create({
   dropdown: {
     margin: 16,
     height: 40,
-    backgroundColor: 'white',
     borderRadius: 5,
     padding: 12,
     shadowColor: '#000',
@@ -68,9 +78,11 @@ const styles = StyleSheet.create({
   textItem: {
     flex: 1,
     fontSize: 16,
+    color: '#000',
   },
   placeholderStyle: {
     fontSize: 16,
+    
   },
   selectedTextStyle: {
     fontSize: 16,

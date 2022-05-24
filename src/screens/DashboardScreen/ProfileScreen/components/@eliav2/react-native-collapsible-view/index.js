@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, {useState, useEffect, useRef} from 'react';
 import {
   StyleSheet,
   View,
@@ -7,18 +7,18 @@ import {
   I18nManager,
   Animated,
   Easing,
-} from "react-native";
-import Collapsible from "react-native-collapsible";
+} from 'react-native';
+import Collapsible from 'react-native-collapsible';
 
-import { Entypo } from "@expo/vector-icons";
+import {Entypo} from '@expo/vector-icons';
 
 const CollapsibleView = ({
   children,
-  title = "",
+  title = '',
   initExpanded = false,
   expanded = null,
   unmountOnCollapse = false,
-  isRTL = "auto",
+  isRTL = 'auto',
   duration = 300,
   collapsibleProps = {},
   collapsibleContainerStyle = {},
@@ -75,18 +75,18 @@ const CollapsibleView = ({
   };
 
   // place the arrow on the left or the right based on the device direction and isRTL property
-  let rowDir = "row";
-  if (isRTL === "auto") isRTL = I18nManager.isRTL;
-  else if (isRTL !== I18nManager.isRTL) rowDir = "row-reverse";
+  let rowDir = 'row';
+  if (isRTL === 'auto') isRTL = I18nManager.isRTL;
+  else if (isRTL !== I18nManager.isRTL) rowDir = 'row-reverse';
 
   const rotateAngle = isRTL ? 90 : -90;
   const rotateAnimDeg = rotateAnim.interpolate({
     inputRange: [0, 360],
-    outputRange: ["0deg", "360deg"],
+    outputRange: ['0deg', '360deg'],
   });
 
   const TitleElement =
-    typeof title === "string" ? (
+    typeof title === 'string' ? (
       <Text style={styles.TitleText}>{title}</Text>
     ) : (
       title
@@ -117,18 +117,17 @@ const CollapsibleView = ({
         style={[styles.container, style, touchableWrapperStyle]}
         onPress={handleToggleShow}
         activeOpacity={activeOpacityFeedback}
-        {...touchableWrapperProps}
-      >
+        {...touchableWrapperProps}>
         <View
           style={{
             flexDirection: rowDir,
-            alignItems: "center",
+            alignItems: 'center',
+            paddingHorizontal: 10,
             ...titleStyle,
           }}
-          {...titleProps}
-        >
+          {...titleProps}>
           {noArrow ? null : (
-            <Animated.View style={{ transform: [{ rotate: rotateAnimDeg }] }}>
+            <Animated.View style={{transform: [{rotate: rotateAnimDeg}]}}>
               <Entypo name="chevron-down" size={28} color="black" />
             </Animated.View>
           )}
@@ -137,12 +136,11 @@ const CollapsibleView = ({
       </TouchableComponent>
       <View style={[styles.container, style, touchableWrapperStyle]}>
         {mounted ? (
-          <View style={{ width: "100%", ...collapsibleContainerStyle }}>
+          <View style={{width: '100%', ...collapsibleContainerStyle}}>
             <Collapsible
               onAnimationEnd={handleAnimationEnd}
               collapsed={!show}
-              {...{ duration, ...collapsibleProps }}
-            >
+              {...{duration, ...collapsibleProps}}>
               {children}
             </Collapsible>
           </View>
@@ -156,11 +154,10 @@ export default CollapsibleView;
 
 const styles = StyleSheet.create({
   container: {
-    alignItems: "flex-start",
-    borderColor: "grey",
+    alignItems: 'flex-start',
+    borderColor: 'grey',
     borderWidth: 1,
-    borderStyle: "solid",
-    
+    borderStyle: 'solid',
   },
-  TitleText: { color: "#3385ff", fontSize: 16, padding: 5 },
+  TitleText: {color: '#3385ff', fontSize: 16, padding: 5},
 });

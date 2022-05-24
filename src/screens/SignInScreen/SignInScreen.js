@@ -58,6 +58,7 @@ const SignInScreen = () => {
     }
 
     setLoading(true);
+    
     try {
       const user = await Auth.signIn(email, password);
       navigation.navigate('OtpScreen', {user});

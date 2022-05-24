@@ -1,20 +1,19 @@
-import React from "react";
-import { View, Text, StyleSheet, Dimensions, Image } from "react-native";
-import DropShadow from "react-native-drop-shadow";
+import React, {useState} from 'react';
+import {View, Text, StyleSheet, Dimensions, Image} from 'react-native';
+import DropShadow from 'react-native-drop-shadow';
 
-export const SLIDER_WIDTH = Dimensions.get("window").width + 80;
+export const SLIDER_WIDTH = Dimensions.get('window').width + 80;
 export const ITEM_WIDTH = Math.round(SLIDER_WIDTH * 0.7);
 
-const SliderItem = ({ item, index }) => {
+const SliderItem = ({item, index}) => {
   return (
     <DropShadow style={styles.shadowProp}>
       <View
         style={{
           width: ITEM_WIDTH,
           height: 220,
-        }}
-      >
-        <Image source={{ uri: item.imgUrl }} style={styles.image} />
+        }}>
+        <Image source={{uri: item.imgUrl}} style={styles.image} />
 
         {/* <Text style={styles.header}>{item.title}</Text>
       <Text style={styles.body}>{item.body}</Text> */}
@@ -39,8 +38,8 @@ const styles = StyleSheet.create({
   //   elevation: 7,
   //   },
   shadowProp: {
-    shadowColor: "#171717",
-    shadowOffset: { width: 5, height: 5 },
+    shadowColor: '#171717',
+    shadowOffset: {width: 5, height: 5},
     shadowOpacity: 0.2,
     shadowRadius: 2,
   },
@@ -51,14 +50,14 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
   header: {
-    color: "#222",
+    color: '#222',
     fontSize: 28,
-    fontWeight: "bold",
+    fontWeight: 'bold',
     paddingLeft: 20,
     paddingTop: 20,
   },
   body: {
-    color: "#222",
+    color: '#222',
     fontSize: 18,
     paddingLeft: 20,
     paddingLeft: 20,

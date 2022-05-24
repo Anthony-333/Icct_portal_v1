@@ -5,7 +5,7 @@ import {
   ScrollView,
   TouchableOpacity,
 } from 'react-native';
-import React from 'react';
+import React, {useEffect} from 'react';
 
 import CustomPicker from '../../../components/CustomPicker';
 import CustomTable from '../../../components/CustomTable';
@@ -14,6 +14,7 @@ var height = Dimensions.get('window').height; //full width
 var width = Dimensions.get('window').width; //full width
 
 const SectionOffering = () => {
+
   return (
     <View style={{backgroundColor: '#0067FF'}}>
       <View>
@@ -42,33 +43,23 @@ const SectionOffering = () => {
             <View style={{width: width / 2}}>
               <Text style={{marginLeft: 20}}>School Year</Text>
               <CustomPicker
-                placeholder={'Select Year'}
-                dropDownItem={[
-                  {label: 'Item 1', value: '1'},
-                  {label: 'Item 2', value: '2'},
-                  {label: 'Item 3', value: '3'},
-                  {label: 'Item 4', value: '4'},
-                  {label: 'Item 5', value: '5'},
-                  {label: 'Item 6', value: '6'},
-                  {label: 'Item 7', value: '7'},
-                  {label: 'Item 8', value: '8'},
-                ]}
+                addStyle={{
+                  backgroundColor: '#F0F0F0',
+                }}
+                placeholder={'2021-2022'}
+                dropDownItem={[{label: '2021-2022', value: '2021-2022'}]}
+                disable={true}
               />
             </View>
             <View style={{width: width / 2}}>
               <Text style={{marginLeft: 20}}>Term</Text>
               <CustomPicker
+                addStyle={{
+                  backgroundColor: '#F0F0F0',
+                }}
+                disable={true}
                 placeholder={'Select Term'}
-                dropDownItem={[
-                  {label: 'Item 1', value: '1'},
-                  {label: 'Item 2', value: '2'},
-                  {label: 'Item 3', value: '3'},
-                  {label: 'Item 4', value: '4'},
-                  {label: 'Item 5', value: '5'},
-                  {label: 'Item 6', value: '6'},
-                  {label: 'Item 7', value: '7'},
-                  {label: 'Item 8', value: '8'},
-                ]}
+                dropDownItem={[{label: 'Third', value: 'Third'}]}
               />
             </View>
           </View>
@@ -77,32 +68,32 @@ const SectionOffering = () => {
             <View style={{width: width / 2}}>
               <Text style={{marginLeft: 20}}>Parent Section</Text>
               <CustomPicker
+                addStyle={{
+                  backgroundColor: 'white',
+                }}
                 placeholder={'Select Section'}
                 dropDownItem={[
-                  {label: 'Item 1', value: '1'},
-                  {label: 'Item 2', value: '2'},
-                  {label: 'Item 3', value: '3'},
-                  {label: 'Item 4', value: '4'},
-                  {label: 'Item 5', value: '5'},
-                  {label: 'Item 6', value: '6'},
-                  {label: 'Item 7', value: '7'},
-                  {label: 'Item 8', value: '8'},
+                  {label: 'OLCA33A026', value: '1OLCA33A026'},
+                  {label: 'OLCA33E040', value: 'OLCA33AE40'},
+                  {label: 'OLCA33E041', value: 'OLCA33AE41'},
+                  {label: 'OLCA33M016', value: 'OLCA33M016'},
+                  {label: 'OLRS22', value: 'OLRS22'},
+                  {label: 'OLRS27', value: 'OLRS27'},
                 ]}
               />
             </View>
             <View style={{width: width / 2}}>
               <Text style={{marginLeft: 20}}>Year Level</Text>
               <CustomPicker
+                addStyle={{
+                  backgroundColor: 'white',
+                }}
                 placeholder={'Select Year'}
                 dropDownItem={[
-                  {label: 'Item 1', value: '1'},
-                  {label: 'Item 2', value: '2'},
-                  {label: 'Item 3', value: '3'},
-                  {label: 'Item 4', value: '4'},
-                  {label: 'Item 5', value: '5'},
-                  {label: 'Item 6', value: '6'},
-                  {label: 'Item 7', value: '7'},
-                  {label: 'Item 8', value: '8'},
+                  {label: 'First Year', value: 'First Year'},
+                  {label: 'Second Year', value: 'Second Year'},
+                  {label: 'Third Year', value: 'Third Year'},
+                  {label: 'Fourth Year', value: 'Fourth Year'},
                 ]}
               />
             </View>
@@ -111,17 +102,38 @@ const SectionOffering = () => {
           <View style={{width: width}}>
             <Text style={{marginLeft: 20}}>Course</Text>
             <CustomPicker
+              addStyle={{
+                backgroundColor: 'white',
+              }}
               search={true}
               placeholder={'Select Course'}
               dropDownItem={[
-                {label: 'Item 1', value: '1'},
-                {label: 'Item 2', value: '2'},
-                {label: 'Item 3', value: '3'},
-                {label: 'Item 4', value: '4'},
-                {label: 'Item 5', value: '5'},
-                {label: 'Item 6', value: '6'},
-                {label: 'Item 7', value: '7'},
-                {label: 'Item 8', value: '8'},
+                {
+                  label: 'ABA - ASSOCIATE IN BUSINESS ADMINISTRATION ',
+                  value: 'ABA - ASSOCIATE IN BUSINESS ADMINISTRATION ',
+                },
+                {
+                  label: 'AB_COMM - BACHELOR OF ARTS IN COMMUNICATION ',
+                  value: 'AB_COMM - BACHELOR OF ARTS IN COMMUNICATION  ',
+                },
+                {
+                  label: 'AB_ENGLISH - BACHELOR OF ARTS IN ENGLISH ',
+                  value: 'AB_ENGLISH - BACHELOR OF ARTS IN ENGLISH ',
+                },
+                {
+                  label: 'ACT - ASSOCIATE IN COMPUTER TECHNOLOGY ',
+                  value: 'ACT - ASSOCIATE IN COMPUTER TECHNOLOGY ',
+                },
+                {
+                  label: 'BECEd - BACHELOR IN EARLY CHILDHOOD EDUCATION ',
+                  value: 'BECEd - BACHELOR IN EARLY CHILDHOOD EDUCATION ',
+                },
+                {
+                  label:
+                    'BEED - BACHELOR IN ELEMENTARY EDUCATION  (Major in  Early Childhood Education)',
+                  value:
+                    'BEED - BACHELOR IN ELEMENTARY EDUCATION  (Major in  Early Childhood Education)',
+                },
               ]}
             />
           </View>

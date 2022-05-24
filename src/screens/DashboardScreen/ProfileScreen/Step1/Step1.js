@@ -15,7 +15,7 @@ import {useNavigation} from '@react-navigation/native';
 import ProgramInformation from '../components/Step1/ProgramInformation';
 import PersonalInformation from '../components/Step1/PersonalInformation';
 import HomeAddress from '../components/Step1/HomeAddress';
-import ProvincialAddress from '../components/Step1/ProvincialAddress';
+import OtherData from '../components/Step1/OtherData';
 
 import {MaterialIcons} from '@expo/vector-icons';
 
@@ -98,6 +98,24 @@ const Step1 = () => {
               initExpanded>
               <PersonalInformation />
             </CollapsibleView>
+
+            <CollapsibleView
+              style={{borderWidth: 0}}
+              title={
+                <Text
+                  style={{
+                    color: '#000000',
+                    fontSize: 20,
+                    alignSelf: 'flex-start',
+                  }}>
+                  Home Address
+                </Text>
+              }
+              initExpanded>
+              <HomeAddress />
+            </CollapsibleView>
+
+           
             {/*
           <CollapsibleView
             style={{ borderWidth: 0 }}

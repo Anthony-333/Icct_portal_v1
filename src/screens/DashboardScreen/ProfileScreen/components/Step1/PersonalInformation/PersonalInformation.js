@@ -15,38 +15,49 @@ const PersonalInformation = () => {
     formState: {errors},
   } = useForm();
 
-  const [selectedDate, setSelectedDate] = useState(null);
-
-  const [datePickerVisible, setDatePickerVisible] = useState(false);
-
-  const showDatePicker = () => {
-    setDatePickerVisible(true);
-  };
-
-  const hideDatePicker = () => {
-    setDatePickerVisible(false);
-  };
-
   return (
-    <View style={{width: width / 1.1}}>
-      <View style={{width: '100%'}}>
-        <CustomInput name="Fname" placeholder="First Name" control={control} />
-      </View>
-      <View style={{width: '100%'}}>
-        <CustomInput name="Mname" placeholder="Middle Name" control={control} />
-      </View>
-      <View style={{width: '100%'}}>
-        <CustomInput name="Lname" placeholder="Last Name" control={control} />
-      </View>
-      <View style={{flexDirection: 'row', alignItems: 'center'}}>
-        <View style={{width: width / 4}}>
-          <CustomInput name="Suffix" placeholder="Suffix" control={control} />
+    <View style={{width: width, flexDirection: 'row'}}>
+      <View style={{paddingHorizontal: 15}}>
+        <View style={{width: '100%'}}>
+          <Text style={{marginLeft: 10}}>First Name</Text>
+          <CustomInput
+            name="Fname"
+            placeholder="First Name"
+            control={control}
+          />
         </View>
-        <View style={{width: width / 2, paddingHorizontal: 10}}>
-          <DatePicker />
+        <View style={{width: '100%'}}>
+          <Text style={{marginLeft: 10}}>Middle Name</Text>
+          <CustomInput
+            name="Mname"
+            placeholder="Middle Name"
+            control={control}
+          />
         </View>
+        <View style={{width: '100%'}}>
+          <Text style={{marginLeft: 10}}>Last Name</Text>
+          <CustomInput name="Lname" placeholder="Last Name" control={control} />
+        </View>
+        <View
+          style={{
+            flexDirection: 'row',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+          }}>
+          <View style={{width: width / 4}}>
+            <Text style={{marginLeft: 10}}>Suffix</Text>
+            <CustomInput name="Suffix" placeholder="Suffix" control={control} />
+          </View>
+          <View style={{width: width / 4}}>
+            <Text style={{marginLeft: 10}}>Suffix</Text>
+            <CustomInput name="Suffix" placeholder="Suffix" control={control} />
+          </View>
+          <View style={{width: width / 2, paddingHorizontal: 10}}>
+            <DatePicker />
+          </View>
+        </View>
+        <View></View>
       </View>
-      <View></View>
     </View>
   );
 };

@@ -85,6 +85,7 @@ const styles = StyleSheet.create({
     height: 40,
     fontSize: 17,
     flex: 1,
+    color: '#000',
   },
 });
 

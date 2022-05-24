@@ -1,5 +1,12 @@
-import {View, Text, Dimensions, ScrollView} from 'react-native';
-import React from 'react';
+import {
+  View,
+  Text,
+  Dimensions,
+  ScrollView,
+  BackHandler,
+  Alert,
+} from 'react-native';
+import React, {useEffect} from 'react';
 
 import CustomAvatar from '../../../components/CustomAvatar';
 import CustomSlider from '../../../components/CustomSlider';
@@ -12,6 +19,24 @@ var width = Dimensions.get('window').width; //full width
 var height = Dimensions.get('window').height; //full width
 
 const Dashboard = () => {
+  // const backAction = () => {
+  //   Alert.alert('Hold on!', 'Are you sure you want to exit??', [
+  //     {
+  //       text: 'Cancel',
+  //       onPress: () => null,
+  //       style: 'cancel',
+  //     },
+  //     {text: 'YES', onPress: () => BackHandler.exitApp()},
+  //   ]);
+  //   return true;
+  // };
+
+  // useEffect(() => {
+  //   BackHandler.addEventListener('hardwareBackPress', backAction);
+
+  //   return () =>
+  //     BackHandler.removeEventListener('hardwareBackPress', backAction);
+  // }, []);
   return (
     <ScrollView style={{backgroundColor: 'white', height: height}}>
       <View>
@@ -21,11 +46,10 @@ const Dashboard = () => {
               backgroundColor: '#0067FF',
               flexDirection: 'row',
               justifyContent: 'space-between',
-              paddingVertical: 20,
+              paddingVertical: 10,
               paddingHorizontal: 40,
               alignItems: 'center',
-              borderBottomRightRadius: 20,
-              borderBottomLeftRadius: 20,
+            
             }}>
             <Text style={{color: '#fff', fontWeight: 'bold', fontSize: 18}}>
               Hi, User!

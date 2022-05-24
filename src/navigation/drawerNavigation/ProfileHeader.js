@@ -20,7 +20,7 @@ const ProfileHeader = () => {
       <View
         style={{
           alignItems: 'center',
-          margin: 20,
+          margin: 10,
           flexDirection: 'row',
           alignItems: 'center',
           justifyContent: 'space-evenly',

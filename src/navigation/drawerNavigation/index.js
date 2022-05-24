@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {View, Text, Image, Dimensions} from 'react-native';
+import {View, Text, Image, Dimensions, BackHandler, Alert} from 'react-native';
 import {
   createDrawerNavigator,
   DrawerContentScrollView,
@@ -37,9 +37,20 @@ const CustomDrawerContent = props => {
   const [onFocus7, setonFocus7] = useState(false);
   const [onFocus8, setonFocus8] = useState(false);
 
+  const setDrawerActive = () => {
+    setonFocus1(true) ||
+      setonFocus2(false) ||
+      setonFocus3(false) ||
+      setonFocus4(false) ||
+      setonFocus5(false) ||
+      setonFocus6(false) ||
+      setonFocus7(false) ||
+      setonFocus8(false);
+  };
   useEffect(() => {
-    setonFocus1(true);
+    setDrawerActive();
   }, []);
+
   return (
     <>
       <DrawerContentScrollView scrollEnabled={false}>
@@ -62,10 +73,11 @@ const CustomDrawerContent = props => {
               height: height,
               marginTop: -4,
               marginLeft: 10,
-              padding: 15,
+              paddingVertical: 15,
               borderTopLeftRadius: 50,
             }}>
             <DrawerItem
+              style={{borderRadius: 10}}
               label={({focused, color}) => (
                 <Text
                   style={{
@@ -103,6 +115,7 @@ const CustomDrawerContent = props => {
             />
 
             <DrawerItem
+              style={{borderRadius: 10}}
               label={({focused, color}) => (
                 <Text
                   style={{
@@ -139,6 +152,7 @@ const CustomDrawerContent = props => {
               }
             />
             <DrawerItem
+              style={{borderRadius: 10}}
               label={({focused, color}) => (
                 <Text
                   style={{
@@ -175,6 +189,7 @@ const CustomDrawerContent = props => {
               }
             />
             <DrawerItem
+              style={{borderRadius: 10}}
               label={({focused, color}) => (
                 <Text
                   style={{
@@ -212,6 +227,7 @@ const CustomDrawerContent = props => {
             />
 
             <DrawerItem
+              style={{borderRadius: 10}}
               label={({focused, color}) => (
                 <Text
                   style={{
@@ -248,6 +264,7 @@ const CustomDrawerContent = props => {
               }
             />
             <DrawerItem
+              style={{borderRadius: 10}}
               label={({focused, color}) => (
                 <Text
                   style={{
@@ -289,6 +306,7 @@ const CustomDrawerContent = props => {
         /> */}
 
             <DrawerItem
+              style={{borderRadius: 10}}
               label={({focused, color}) => (
                 <Text
                   style={{
@@ -323,6 +341,25 @@ const CustomDrawerContent = props => {
 
 const index = () => {
   const Drawer = createDrawerNavigator();
+
+  const backAction = () => {
+    Alert.alert('Hold on!', 'Are you sure you want to exit?', [
+      {
+        text: 'Cancel',
+        onPress: () => null,
+        style: 'cancel',
+      },
+      {text: 'YES', onPress: () => BackHandler.exitApp()},
+    ]);
+    return true;
+  };
+
+  useEffect(() => {
+    BackHandler.addEventListener('hardwareBackPress', backAction);
+
+    return () =>
+      BackHandler.removeEventListener('hardwareBackPress', backAction);
+  }, []);
 
   return (
     <Drawer.Navigator
