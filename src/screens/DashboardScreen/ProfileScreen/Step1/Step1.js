@@ -15,7 +15,7 @@ import {useNavigation} from '@react-navigation/native';
 import ProgramInformation from '../components/Step1/ProgramInformation';
 import PersonalInformation from '../components/Step1/PersonalInformation';
 import HomeAddress from '../components/Step1/HomeAddress';
-import OtherData from '../components/Step1/OtherData';
+
 
 import {MaterialIcons} from '@expo/vector-icons';
 

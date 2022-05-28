@@ -5,6 +5,7 @@ import {
   ScrollView,
   BackHandler,
   Alert,
+  TouchableOpacity,
 } from 'react-native';
 import React, {useEffect} from 'react';
 
@@ -15,10 +16,13 @@ import DropShadow from 'react-native-drop-shadow';
 
 import {AntDesign} from '@expo/vector-icons';
 
+import {useNavigation} from '@react-navigation/native';
+
 var width = Dimensions.get('window').width; //full width
 var height = Dimensions.get('window').height; //full width
 
 const Dashboard = () => {
+  const navigation = useNavigation();
   // const backAction = () => {
   //   Alert.alert('Hold on!', 'Are you sure you want to exit??', [
   //     {
@@ -49,12 +53,13 @@ const Dashboard = () => {
               paddingVertical: 10,
               paddingHorizontal: 40,
               alignItems: 'center',
-            
             }}>
             <Text style={{color: '#fff', fontWeight: 'bold', fontSize: 18}}>
               Hi, User!
             </Text>
-            <CustomAvatar />
+            <TouchableOpacity onPress={() => navigation.openDrawer()}>
+              <CustomAvatar />
+            </TouchableOpacity>
           </View>
           <View
             style={{

@@ -34,20 +34,24 @@ const MfaScreen = () => {
   const navigation = useNavigation();
 
   const onConfirmPressed = async data => {
-    if (loading) {
-      return;
-    }
-
-    setLoading(true);
-
     try {
-      await Auth.confirmSignIn(user, data.code, 'SMS_MFA');
+      if (loading) {
+        return;
+      }
 
-      // navigation.navigate('DrawerNavigation');
+      setLoading(true);
+
+      try {
+        await Auth.confirmSignIn(user, data.code, 'SMS_MFA');
+
+        // navigation.navigate('DrawerNavigation');
+      } catch (e) {
+        Alert.alert(e);
+      }
+      setLoading(false);
     } catch (e) {
       Alert.alert(e);
     }
-    setLoading(false);
   };
 
   const onResendPressed = () => {

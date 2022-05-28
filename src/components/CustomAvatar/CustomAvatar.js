@@ -8,8 +8,8 @@ const CustomAvatar = () => {
     <View>
       <UserAvatar
         size={50}
-        name="John Doe"
-        bgColors={['#ccc', '#fafafa', '#ccaabb']}
+        name="john anthony"
+        bgColors={['#A200DB']}
       />
     </View>
   );
