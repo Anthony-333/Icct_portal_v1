@@ -116,7 +116,12 @@ const Dashboard = () => {
                 padding: 20,
               }}>
               <Text
-                style={{fontWeight: 'bold', fontSize: 18, marginVertical: 5}}>
+                style={{
+                  fontWeight: 'bold',
+                  fontSize: 18,
+                  marginVertical: 5,
+                  color: 'gray',
+                }}>
                 School Year:{' '}
                 <Text
                   style={{fontWeight: 'bold', fontSize: 18, color: '#0067FF'}}>
@@ -124,7 +129,12 @@ const Dashboard = () => {
                 </Text>
               </Text>
               <Text
-                style={{fontWeight: 'bold', fontSize: 18, marginVertical: 5}}>
+                style={{
+                  fontWeight: 'bold',
+                  fontSize: 18,
+                  marginVertical: 5,
+                  color: 'gray',
+                }}>
                 Term:{' '}
                 <Text
                   style={{fontWeight: 'bold', fontSize: 18, color: '#0067FF'}}>

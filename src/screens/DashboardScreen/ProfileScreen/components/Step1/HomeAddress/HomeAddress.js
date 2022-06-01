@@ -17,7 +17,7 @@ const HomeAddress = () => {
     <View style={{width: width, flexDirection: 'row'}}>
       <View style={{paddingHorizontal: 15}}>
         <View style={{width: '100%'}}>
-          <Text style={{marginLeft: 10}}>Province</Text>
+          <Text style={{marginLeft: 10, color: 'gray'}}>Province</Text>
           <CustomInput
             name="Province"
             placeholder="Province"
@@ -25,7 +25,7 @@ const HomeAddress = () => {
           />
         </View>
         <View style={{width: '100%'}}>
-          <Text style={{marginLeft: 10}}>City/Municipality</Text>
+          <Text style={{marginLeft: 10, color: 'gray'}}>City/Municipality</Text>
           <CustomInput
             name="City/Municipality"
             placeholder="City/Municipality"
@@ -33,7 +33,7 @@ const HomeAddress = () => {
           />
         </View>
         <View style={{width: '100%'}}>
-        <Text style={{marginLeft: 10}}>Barangay</Text>
+          <Text style={{marginLeft: 10, color: 'gray'}}>Barangay</Text>
           <CustomInput
             name="Barangay"
             placeholder="Baranggay"

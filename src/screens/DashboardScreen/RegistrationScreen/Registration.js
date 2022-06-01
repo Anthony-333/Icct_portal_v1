@@ -36,7 +36,7 @@ const Registration = () => {
             borderTopLeftRadius: 30,
             borderTopRightRadius: 30,
             paddingVertical: 30,
-            height: height ,
+            height: height,
           }}>
           <View
             style={{
@@ -54,7 +54,9 @@ const Registration = () => {
                 }}>
                 Name
               </Text>
-              <Text style={{marginLeft: 20}}>Dela Cruz, Juan</Text>
+              <Text style={{marginLeft: 20, color: 'gray'}}>
+                Dela Cruz, Juan
+              </Text>
             </View>
             <View style={{width: width / 2}}>
               <Text
@@ -66,7 +68,7 @@ const Registration = () => {
                 }}>
                 Student Number
               </Text>
-              <Text style={{marginLeft: 20}}>20196370</Text>
+              <Text style={{marginLeft: 20, color: 'gray'}}>20196370</Text>
             </View>
           </View>
 
@@ -86,7 +88,7 @@ const Registration = () => {
                 }}>
                 Course
               </Text>
-              <Text style={{marginLeft: 20}}>
+              <Text style={{marginLeft: 20, color: 'gray'}}>
                 (BSIT) BACHELOR OF SCIENCE IN INFORMATION TECHNOLOGY
               </Text>
             </View>
@@ -100,7 +102,7 @@ const Registration = () => {
                 }}>
                 Year Level
               </Text>
-              <Text style={{marginLeft: 20}}>Third Year</Text>
+              <Text style={{marginLeft: 20, color: 'gray'}}>Third Year</Text>
             </View>
           </View>
 
@@ -120,7 +122,7 @@ const Registration = () => {
                 }}>
                 Curriculum Year
               </Text>
-              <Text style={{marginLeft: 20}}>2021</Text>
+              <Text style={{marginLeft: 20, color: 'gray'}}>2021</Text>
             </View>
             <View style={{width: width / 2}}>
               <Text
@@ -132,7 +134,7 @@ const Registration = () => {
                 }}>
                 Section
               </Text>
-              <Text style={{marginLeft: 20}}>OLCA333A026</Text>
+              <Text style={{marginLeft: 20, color: 'gray'}}>OLCA333A026</Text>
             </View>
           </View>
 
@@ -152,7 +154,7 @@ const Registration = () => {
                 }}>
                 Status
               </Text>
-              <Text style={{marginLeft: 20}}>
+              <Text style={{marginLeft: 20, color: 'gray'}}>
                 Continuing (Regular) ( 15 Unit(s) Allowed )
               </Text>
             </View>
@@ -166,7 +168,7 @@ const Registration = () => {
                 }}>
                 Academic Term
               </Text>
-              <Text style={{marginLeft: 20}}>Third</Text>
+              <Text style={{marginLeft: 20, color: 'gray'}}>Third</Text>
             </View>
           </View>
 
@@ -186,7 +188,7 @@ const Registration = () => {
                 }}>
                 School Year
               </Text>
-              <Text style={{marginLeft: 20}}>2021-2022</Text>
+              <Text style={{marginLeft: 20, color: 'gray'}}>2021-2022</Text>
             </View>
             <View style={{width: width / 2}}></View>
           </View>
@@ -235,7 +237,7 @@ const Registration = () => {
           </TouchableOpacity>
 
           <View style={{}}>
-          <CustomTable
+            <CustomTable
               tableHeadItems={[
                 'Subject Code',
                 'Subject Title',

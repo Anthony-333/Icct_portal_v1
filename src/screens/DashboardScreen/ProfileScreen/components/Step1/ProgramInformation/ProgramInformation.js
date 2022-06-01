@@ -9,7 +9,7 @@ const ProgramInformation = () => {
   return (
     <View>
       <View style={{width: width}}>
-        <Text style={{marginLeft: 15}}>Classification</Text>
+        <Text style={{marginLeft: 15, color: 'gray'}}>Classification</Text>
         <CustomPicker
           placeholder={'- status -'}
           disable={true}
@@ -17,7 +17,7 @@ const ProgramInformation = () => {
         />
       </View>
       <View>
-        <Text style={{marginLeft: 15}}>Academic Program</Text>
+        <Text style={{marginLeft: 15, color: 'gray'}}>Academic Program</Text>
         <CustomPicker
           placeholder={'Batchelor Programs'}
           disable={true}
@@ -25,7 +25,9 @@ const ProgramInformation = () => {
         />
       </View>
       <View>
-        <Text style={{marginLeft: 15}}>Course (First Choice)</Text>
+        <Text style={{marginLeft: 15, color: 'gray'}}>
+          Course (First Choice)
+        </Text>
         <CustomPicker
           placeholder={'BSIT - BACHELOR OF SCIENCE IN ...'}
           disable={true}
@@ -33,7 +35,9 @@ const ProgramInformation = () => {
         />
       </View>
       <View>
-        <Text style={{marginLeft: 15}}>Course (Second Choice)</Text>
+        <Text style={{marginLeft: 15, color: 'gray'}}>
+          Course (Second Choice)
+        </Text>
         <CustomPicker
           placeholder={'- Second Choice -'}
           disable={true}
@@ -41,7 +45,9 @@ const ProgramInformation = () => {
         />
       </View>
       <View>
-        <Text style={{marginLeft: 15}}>Course (Third Choice)</Text>
+        <Text style={{marginLeft: 15, color: 'gray'}}>
+          Course (Third Choice)
+        </Text>
         <CustomPicker
           placeholder={'- Third Choice -'}
           disable={true}
@@ -49,23 +55,18 @@ const ProgramInformation = () => {
         />
       </View>
       <View>
-        <Text style={{marginLeft: 15}}>Year Level</Text>
+        <Text style={{marginLeft: 15, color: 'gray'}}>Year Level</Text>
         <CustomPicker
-         placeholder={'Select Year '}
-          dropDownItem={[
-            {label: 'First Year', value: 'First Year'},
-          ]}
+          placeholder={'Select Year '}
+          dropDownItem={[{label: 'First Year', value: 'First Year'}]}
         />
       </View>
       <View>
-        <Text style={{marginLeft: 15}}>Preferred Session</Text>
+        <Text style={{marginLeft: 15, color: 'gray'}}>Preferred Session</Text>
         <CustomPicker
           placeholder={'- Select Session -'}
           disable={true}
-          dropDownItem={[
-            {label: 'Item 1', value: '1'},
-         
-          ]}
+          dropDownItem={[{label: 'Item 1', value: '1'}]}
         />
       </View>
     </View>

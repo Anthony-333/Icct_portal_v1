@@ -42,7 +42,7 @@ const SectionOffering = () => {
           }}>
           <View style={{flexDirection: 'row', justifyContent: 'space-evenly'}}>
             <View style={{width: width / 2}}>
-              <Text style={{marginLeft: 20}}>School Year</Text>
+              <Text style={{marginLeft: 20, color: 'gray'}}>School Year</Text>
               <CustomPicker
                 placeholder={'2021-2022'}
                 dropDownItem={[{label: '2021-2022', value: '2021-2022'}]}
@@ -50,7 +50,7 @@ const SectionOffering = () => {
               />
             </View>
             <View style={{width: width / 2}}>
-              <Text style={{marginLeft: 20}}>Term</Text>
+              <Text style={{marginLeft: 20, color: 'gray'}}>Term</Text>
               <CustomPicker
                 addStyle={{
                   backgroundColor: '#F0F0F0',
@@ -64,7 +64,7 @@ const SectionOffering = () => {
 
           <View style={{flexDirection: 'row'}}>
             <View style={{width: width / 2}}>
-              <Text style={{marginLeft: 20}}>Parent Section</Text>
+              <Text style={{marginLeft: 20, color: 'gray'}}>Parent Section</Text>
               <CustomPicker
                 placeholder={'Select Section'}
                 dropDownItem={[
@@ -78,7 +78,7 @@ const SectionOffering = () => {
               />
             </View>
             <View style={{width: width / 2}}>
-              <Text style={{marginLeft: 20}}>Year Level</Text>
+              <Text style={{marginLeft: 20, color: 'gray'}}>Year Level</Text>
               <CustomPicker
                 placeholder={'Select Year'}
                 dropDownItem={[
@@ -92,7 +92,7 @@ const SectionOffering = () => {
           </View>
 
           <View style={{width: width}}>
-            <Text style={{marginLeft: 20}}>Course</Text>
+            <Text style={{marginLeft: 20, color: 'gray'}}>Course</Text>
             <CustomPicker
               search={true}
               placeholder={'Select Course'}
@@ -137,7 +137,7 @@ const SectionOffering = () => {
           </View>
 
           <View style={{paddingTop: 20}}>
-            <Text style={{marginLeft: 15}}>Section: OLCA333A026</Text>
+            <Text style={{marginLeft: 15, color: 'gray'}}>Section: OLCA333A026</Text>
             <CustomTable
               tableHeadItems={[
                 'Subject Code',

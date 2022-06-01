@@ -57,8 +57,18 @@ const CustomTable = ({tableHeadItems, widthArrItems, rowDataItems}) => {
 const styles = StyleSheet.create({
   container: {flex: 1, padding: 16, paddingTop: 10, backgroundColor: '#fff'},
   header: {height: 50, backgroundColor: '#0067FF'},
-  headText: {color: '#fff', textAlign: 'center', fontWeight: 'bold'},
-  text: {color: '#000', textAlign: 'center', fontWeight: 'normal'},
+  headText: {
+    color: '#fff',
+    textAlign: 'center',
+    fontWeight: 'bold',
+    fontSize: 13,
+  },
+  text: {
+    color: '#000',
+    textAlign: 'center',
+    fontWeight: 'normal',
+    fontSize: 13,
+  },
   dataWrapper: {marginTop: -5},
   row: {height: 40, backgroundColor: '#fff'},
 });

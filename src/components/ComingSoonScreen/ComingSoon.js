@@ -1,18 +1,33 @@
-import {View, Text, Image} from 'react-native';
+import {View, Text, Image, Dimensions} from 'react-native';
 import React from 'react';
+
+var height = Dimensions.get('window').height; //full width
+var width = Dimensions.get('window').width; //full width
 
 const ComingSoon = () => {
   return (
-    <View>
+    <View
+      style={{
+        flex: 1,
+        width: width,
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}>
       <Image
         source={require('./image/working.png')}
         style={{
-          height: 200,
-          width: 400,
+          height: 300,
+          width: 300,
           resizeMode: 'contain',
         }}
       />
-      <Text style={{fontSize: 20, fontWeight: 'normal', textAlign: 'center'}}>
+      <Text
+        style={{
+          fontSize: 20,
+          fontWeight: 'normal',
+          textAlign: 'center',
+          color: 'gray',
+        }}>
         Devs are working...
       </Text>
     </View>

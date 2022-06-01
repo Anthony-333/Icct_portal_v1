@@ -37,6 +37,7 @@ const CustomInput = ({
             <View style={{flexDirection: 'row', alignItems: 'center'}}>
               <View style={{paddingRight: 5}}>{leftIcon}</View>
               <TextInput
+                placeholderTextColor={'lightgray'}
                 value={value}
                 onChangeText={onChange}
                 onBlur={() => setOnFocusInput(false) && onBlur}

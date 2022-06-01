@@ -82,10 +82,11 @@ const styles = StyleSheet.create({
   },
   placeholderStyle: {
     fontSize: 13,
-    
+    color: '#000',
   },
   selectedTextStyle: {
     fontSize: 13,
+    color: '#000',
     
   },
   iconStyle: {
