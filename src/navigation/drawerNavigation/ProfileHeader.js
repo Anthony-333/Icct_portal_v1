@@ -25,9 +25,9 @@ const ProfileHeader = () => {
           alignItems: 'center',
           justifyContent: 'space-evenly',
         }}>
-        <View>
+        <TouchableOpacity onPress={onViewProfilePressed}>
           <CustomAvatar />
-        </View>
+        </TouchableOpacity>
 
         <View>
           {/* <Text
@@ -40,7 +40,7 @@ const ProfileHeader = () => {
           <Text style={{color: '#fff'}}>0000000</Text>
         </View>
 
-        <TouchableOpacity onPress={onViewProfilePressed}>
+        <TouchableOpacity>
           <AntDesign name="caretdown" size={24} color="#003583" />
         </TouchableOpacity>
       </View>

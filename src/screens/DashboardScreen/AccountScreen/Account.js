@@ -1,10 +1,14 @@
-import {View, Text} from 'react-native';
+import {View, Text, Dimensions} from 'react-native';
 import React from 'react';
+import ComingSoon from '../../../components/ComingSoonScreen/ComingSoon';
+
+var height = Dimensions.get('window').height; //full width
+var width = Dimensions.get('window').width; //full width
 
 const Account = () => {
   return (
-    <View>
-      <Text>Account</Text>
+    <View style={{backgroundColor: '#fff', height: height}}>
+      <ComingSoon />
     </View>
   );
 };

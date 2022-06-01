@@ -77,15 +77,16 @@ const styles = StyleSheet.create({
   },
   textItem: {
     flex: 1,
-    fontSize: 16,
+    fontSize: 13,
     color: '#000',
   },
   placeholderStyle: {
-    fontSize: 16,
+    fontSize: 13,
     
   },
   selectedTextStyle: {
-    fontSize: 16,
+    fontSize: 13,
+    
   },
   iconStyle: {
     width: 20,
@@ -93,7 +94,7 @@ const styles = StyleSheet.create({
   },
   inputSearchStyle: {
     height: 40,
-    fontSize: 16,
+    fontSize: 13,
   },
 });
 

@@ -7,15 +7,15 @@ import {
 } from 'react-native';
 import React, {useEffect} from 'react';
 
-import CustomPicker from '../../../components/CustomPicker';
 import CustomTable from '../../../components/CustomTable';
+import TableItems from './tableItems';
 
 var height = Dimensions.get('window').height; //full width
 var width = Dimensions.get('window').width; //full width
 
 const Registration = () => {
   return (
-    <View style={{backgroundColor: '#0067FF'}}>
+    <ScrollView style={{backgroundColor: '#0067FF'}}>
       <View>
         <View>
           <Text
@@ -36,150 +36,229 @@ const Registration = () => {
             borderTopLeftRadius: 30,
             borderTopRightRadius: 30,
             paddingVertical: 30,
-            height: height,
+            height: height ,
           }}>
-          <View style={{flexDirection: 'row', justifyContent: 'space-evenly'}}>
+          <View
+            style={{
+              flexDirection: 'row',
+              justifyContent: 'space-evenly',
+              marginVertical: 5,
+            }}>
             <View style={{width: width / 2}}>
-              <Text style={{marginLeft: 20}}>School Year</Text>
-              <CustomPicker
-                addStyle={{
-                  backgroundColor: '#F0F0F0',
-                }}
-                placeholder={'2021-2022'}
-                dropDownItem={[{label: '2021-2022', value: '2021-2022'}]}
-                disable={true}
-              />
+              <Text
+                style={{
+                  marginLeft: 20,
+                  fontSize: 10,
+                  fontWeight: 'bold',
+                  color: '#0067FF',
+                }}>
+                Name
+              </Text>
+              <Text style={{marginLeft: 20}}>Dela Cruz, Juan</Text>
             </View>
             <View style={{width: width / 2}}>
-              <Text style={{marginLeft: 20}}>Term</Text>
-              <CustomPicker
-                addStyle={{
-                  backgroundColor: '#F0F0F0',
-                }}
-                disable={true}
-                placeholder={'Select Term'}
-                dropDownItem={[{label: 'Third', value: 'Third'}]}
-              />
+              <Text
+                style={{
+                  marginLeft: 20,
+                  fontSize: 10,
+                  fontWeight: 'bold',
+                  color: '#0067FF',
+                }}>
+                Student Number
+              </Text>
+              <Text style={{marginLeft: 20}}>20196370</Text>
             </View>
-          </View>
-
-          <View style={{flexDirection: 'row'}}>
-            <View style={{width: width / 2}}>
-              <Text style={{marginLeft: 20}}>Parent Section</Text>
-              <CustomPicker
-                addStyle={{
-                  backgroundColor: 'white',
-                }}
-                placeholder={'Select Section'}
-                dropDownItem={[
-                  {label: 'OLCA33A026', value: '1OLCA33A026'},
-                  {label: 'OLCA33E040', value: 'OLCA33AE40'},
-                  {label: 'OLCA33E041', value: 'OLCA33AE41'},
-                  {label: 'OLCA33M016', value: 'OLCA33M016'},
-                  {label: 'OLRS22', value: 'OLRS22'},
-                  {label: 'OLRS27', value: 'OLRS27'},
-                ]}
-              />
-            </View>
-            <View style={{width: width / 2}}>
-              <Text style={{marginLeft: 20}}>Year Level</Text>
-              <CustomPicker
-                addStyle={{
-                  backgroundColor: 'white',
-                }}
-                placeholder={'Select Year'}
-                dropDownItem={[
-                  {label: 'First Year', value: 'First Year'},
-                  {label: 'Second Year', value: 'Second Year'},
-                  {label: 'Third Year', value: 'Third Year'},
-                  {label: 'Fourth Year', value: 'Fourth Year'},
-                ]}
-              />
-            </View>
-          </View>
-
-          <View style={{width: width}}>
-            <Text style={{marginLeft: 20}}>Course</Text>
-            <CustomPicker
-              addStyle={{
-                backgroundColor: 'white',
-              }}
-              search={true}
-              placeholder={'Select Course'}
-              dropDownItem={[
-                {
-                  label: 'ABA - ASSOCIATE IN BUSINESS ADMINISTRATION ',
-                  value: 'ABA - ASSOCIATE IN BUSINESS ADMINISTRATION ',
-                },
-                {
-                  label: 'AB_COMM - BACHELOR OF ARTS IN COMMUNICATION ',
-                  value: 'AB_COMM - BACHELOR OF ARTS IN COMMUNICATION  ',
-                },
-                {
-                  label: 'AB_ENGLISH - BACHELOR OF ARTS IN ENGLISH ',
-                  value: 'AB_ENGLISH - BACHELOR OF ARTS IN ENGLISH ',
-                },
-                {
-                  label: 'ACT - ASSOCIATE IN COMPUTER TECHNOLOGY ',
-                  value: 'ACT - ASSOCIATE IN COMPUTER TECHNOLOGY ',
-                },
-                {
-                  label: 'BECEd - BACHELOR IN EARLY CHILDHOOD EDUCATION ',
-                  value: 'BECEd - BACHELOR IN EARLY CHILDHOOD EDUCATION ',
-                },
-                {
-                  label:
-                    'BEED - BACHELOR IN ELEMENTARY EDUCATION  (Major in  Early Childhood Education)',
-                  value:
-                    'BEED - BACHELOR IN ELEMENTARY EDUCATION  (Major in  Early Childhood Education)',
-                },
-              ]}
-            />
           </View>
 
           <View
             style={{
-              width: width,
-              height: 'auto',
               flexDirection: 'row',
               justifyContent: 'space-evenly',
+              marginVertical: 5,
             }}>
-            <TouchableOpacity
-              style={{
-                width: width / 2.3,
-                height: 'auto',
-                backgroundColor: '#0067FF',
-                flexDirection: 'row',
-                alignItems: 'center',
-                justifyContent: 'center',
-              }}>
-              <Text style={{color: '#fff', paddingVertical: 10}}>
-                View Sections
+            <View style={{width: width / 2}}>
+              <Text
+                style={{
+                  marginLeft: 20,
+                  fontSize: 10,
+                  fontWeight: 'bold',
+                  color: '#0067FF',
+                }}>
+                Course
               </Text>
-            </TouchableOpacity>
-
-            <TouchableOpacity
-              style={{
-                width: width / 2.3,
-                height: 'auto',
-                backgroundColor: '#0067FF',
-                flexDirection: 'row',
-                alignItems: 'center',
-                justifyContent: 'center',
-              }}>
-              <Text style={{color: '#fff', paddingVertical: 10}}>
-                View Open Subjects
+              <Text style={{marginLeft: 20}}>
+                (BSIT) BACHELOR OF SCIENCE IN INFORMATION TECHNOLOGY
               </Text>
-            </TouchableOpacity>
+            </View>
+            <View style={{width: width / 2}}>
+              <Text
+                style={{
+                  marginLeft: 20,
+                  fontSize: 10,
+                  fontWeight: 'bold',
+                  color: '#0067FF',
+                }}>
+                Year Level
+              </Text>
+              <Text style={{marginLeft: 20}}>Third Year</Text>
+            </View>
           </View>
 
-          <View style={{paddingHorizontal: 20, paddingTop: 20}}>
-            <Text style={{paddingBottom: 10}}>Section: OLCA333A026</Text>
-            <CustomTable />
+          <View
+            style={{
+              flexDirection: 'row',
+              justifyContent: 'space-evenly',
+              marginVertical: 5,
+            }}>
+            <View style={{width: width / 2}}>
+              <Text
+                style={{
+                  marginLeft: 20,
+                  fontSize: 10,
+                  fontWeight: 'bold',
+                  color: '#0067FF',
+                }}>
+                Curriculum Year
+              </Text>
+              <Text style={{marginLeft: 20}}>2021</Text>
+            </View>
+            <View style={{width: width / 2}}>
+              <Text
+                style={{
+                  marginLeft: 20,
+                  fontSize: 10,
+                  fontWeight: 'bold',
+                  color: '#0067FF',
+                }}>
+                Section
+              </Text>
+              <Text style={{marginLeft: 20}}>OLCA333A026</Text>
+            </View>
+          </View>
+
+          <View
+            style={{
+              flexDirection: 'row',
+              justifyContent: 'space-evenly',
+              marginVertical: 5,
+            }}>
+            <View style={{width: width / 2}}>
+              <Text
+                style={{
+                  marginLeft: 20,
+                  fontSize: 10,
+                  fontWeight: 'bold',
+                  color: '#0067FF',
+                }}>
+                Status
+              </Text>
+              <Text style={{marginLeft: 20}}>
+                Continuing (Regular) ( 15 Unit(s) Allowed )
+              </Text>
+            </View>
+            <View style={{width: width / 2}}>
+              <Text
+                style={{
+                  marginLeft: 20,
+                  fontSize: 10,
+                  fontWeight: 'bold',
+                  color: '#0067FF',
+                }}>
+                Academic Term
+              </Text>
+              <Text style={{marginLeft: 20}}>Third</Text>
+            </View>
+          </View>
+
+          <View
+            style={{
+              flexDirection: 'row',
+              justifyContent: 'space-evenly',
+              marginVertical: 5,
+            }}>
+            <View style={{width: width / 2}}>
+              <Text
+                style={{
+                  marginLeft: 20,
+                  fontSize: 10,
+                  fontWeight: 'bold',
+                  color: '#0067FF',
+                }}>
+                School Year
+              </Text>
+              <Text style={{marginLeft: 20}}>2021-2022</Text>
+            </View>
+            <View style={{width: width / 2}}></View>
+          </View>
+
+          <TouchableOpacity
+            style={{
+              height: 'auto',
+              backgroundColor: '#0067FF',
+              flexDirection: 'row',
+              alignItems: 'center',
+              justifyContent: 'center',
+              marginHorizontal: 15,
+              marginVertical: 5,
+            }}>
+            <Text style={{color: '#fff', paddingVertical: 10}}>
+              Tentative and Assessment Form
+            </Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            style={{
+              height: 'auto',
+              backgroundColor: '#0067FF',
+              flexDirection: 'row',
+              alignItems: 'center',
+              justifyContent: 'center',
+              marginHorizontal: 15,
+              marginVertical: 5,
+            }}>
+            <Text style={{color: '#fff', paddingVertical: 10}}>
+              Official Registration And Assessment Form
+            </Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            style={{
+              height: 'auto',
+              backgroundColor: '#0067FF',
+              flexDirection: 'row',
+              alignItems: 'center',
+              justifyContent: 'center',
+              marginHorizontal: 15,
+              marginVertical: 5,
+            }}>
+            <Text style={{color: '#fff', paddingVertical: 10}}>Assessment</Text>
+          </TouchableOpacity>
+
+          <View style={{}}>
+          <CustomTable
+              tableHeadItems={[
+                'Subject Code',
+                'Subject Title',
+                'Lec',
+                'Lab',
+                'Tuition Units',
+                'Credited Units',
+                'Section',
+                'Professor',
+                'Slots',
+                'Day',
+                'Time',
+                'Room',
+              ]}
+              widthArrItems={[
+                100, 300, 50, 50, 60, 60, 150, 150, 50, 50, 150, 150,
+              ]}
+              rowDataItems={TableItems}
+            />
           </View>
         </ScrollView>
       </View>
-    </View>
+    </ScrollView>
   );
 };
 

@@ -30,27 +30,16 @@ const Step1 = () => {
         style={{
           flexDirection: 'row',
           alignItems: 'center',
-          justifyContent: 'space-between',
+          justifyContent: 'center',
           paddingHorizontal: 15,
           paddingVertical: 15,
         }}>
-        <TouchableOpacity>
-          <MaterialIcons
-            onPress={() => navigation.goBack()}
-            name="keyboard-backspace"
-            size={30}
-            color="white"
-          />
-        </TouchableOpacity>
+      
 
         <Text style={{fontSize: 23, fontWeight: 'bold', color: '#ffffff'}}>
           Profile
         </Text>
-        <MaterialIcons
-          name="keyboard-backspace"
-          size={30}
-          color="transparent"
-        />
+        
       </View>
       <ScrollView
         style={{

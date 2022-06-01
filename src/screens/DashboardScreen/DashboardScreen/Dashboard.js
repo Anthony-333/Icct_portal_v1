@@ -51,7 +51,7 @@ const Dashboard = () => {
               flexDirection: 'row',
               justifyContent: 'space-between',
               paddingVertical: 10,
-              paddingHorizontal: 40,
+              paddingHorizontal: 20,
               alignItems: 'center',
             }}>
             <Text style={{color: '#fff', fontWeight: 'bold', fontSize: 18}}>

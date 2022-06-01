@@ -8,8 +8,8 @@ const CustomAvatar = () => {
     <View>
       <UserAvatar
         size={50}
-        name="john anthony"
-        bgColors={['#A200DB']}
+        name="Avishay Bar"
+        src="https://res.cloudinary.com/dzhvw7vxn/image/upload/v1653972425/Icct-portal/user_1_ebh02d.png"
       />
     </View>
   );

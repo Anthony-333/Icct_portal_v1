@@ -1,66 +1,66 @@
 import React, {Component} from 'react';
-import {StyleSheet, View} from 'react-native';
-import {
-  Table,
-  TableWrapper,
-  Row,
-  Rows,
-  Col,
-} from 'react-native-table-component';
+import {StyleSheet, View, ScrollView} from 'react-native';
+import {Table, TableWrapper, Row} from 'react-native-table-component';
 
-export default class ExampleTwo extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      tableHead: ['Subject Code', 'Subject Title'],
-      tableTitle: ['OLCAPS2', 'OLCC05', 'OLPF1 ', 'OLIAS2'],
-      tableData: [
-        ['Capstone Project and Research 2'],
-        ['applications development and emerging technologies'],
-        ['event driven programming'],
-        ['information assurance and security 2'],
-      ],
-    };
-  }
+const CustomTable = ({tableHeadItems, widthArrItems, rowDataItems}) => {
+  const tableHead = tableHeadItems;
+  const widthArr = widthArrItems;
 
-  render() {
-    const state = this.state;
-    return (
-      <View style={styles.container}>
-        <Table borderStyle={{borderWidth: 1, borderColor: '#C4C4C4'}}>
-          <Row
-            data={state.tableHead}
-            flexArr={[1, 2, 1, 1]}
-            style={styles.head}
-            textStyle={styles.text}
-          />
-          <TableWrapper style={styles.wrapper}>
-            <Col
-              data={state.tableTitle}
-              style={styles.title}
-              heightArr={40}
-              textStyle={styles.textTitle}
+  const rowData = rowDataItems;
+
+  return (
+    <View style={styles.container}>
+      <ScrollView horizontal={true}>
+        <View>
+          <Table borderStyle={{borderWidth: 2, borderColor: '#C1C0B9'}}>
+            <Row
+              data={tableHead}
+              widthArr={widthArr}
+              style={styles.header}
+              textStyle={styles.headText}
             />
-            <Rows
-              data={state.tableData}
-              flexArr={[1, 1]}
-              style={styles.row}
-              textStyle={styles.textData}
-            />
-          </TableWrapper>
-        </Table>
-      </View>
-    );
-  }
-}
+          </Table>
+          <ScrollView style={styles.dataWrapper}>
+            <Table borderStyle={{borderWidth: 2, borderColor: '#C1C0B9'}}>
+              <Row
+                data={rowData.row1}
+                widthArr={widthArr}
+                style={[styles.row]}
+                textStyle={styles.text}
+              />
+              <Row
+                data={rowData.row2}
+                widthArr={widthArr}
+                style={[styles.row]}
+                textStyle={styles.text}
+              />
+              <Row
+                data={rowData.row3}
+                widthArr={widthArr}
+                style={[styles.row]}
+                textStyle={styles.text}
+              />
+              <Row
+                data={rowData.row4}
+                widthArr={widthArr}
+                style={[styles.row]}
+                textStyle={styles.text}
+              />
+            </Table>
+          </ScrollView>
+        </View>
+      </ScrollView>
+    </View>
+  );
+};
 
 const styles = StyleSheet.create({
-  container: {flex: 1, backgroundColor: '#fff'},
-  head: {height: 40, backgroundColor: '#0067FF'},
-  wrapper: {flexDirection: 'row'},
-  title: {flex: 1, backgroundColor: '#fff'},
-  row: {height: 40},
-  text: {textAlign: 'center', color: '#fff'},
-  textTitle: {textAlign: 'center', color: '#000'},
-  textData: {textAlign: 'center', color: '#000'},
+  container: {flex: 1, padding: 16, paddingTop: 10, backgroundColor: '#fff'},
+  header: {height: 50, backgroundColor: '#0067FF'},
+  headText: {color: '#fff', textAlign: 'center', fontWeight: 'bold'},
+  text: {color: '#000', textAlign: 'center', fontWeight: 'normal'},
+  dataWrapper: {marginTop: -5},
+  row: {height: 40, backgroundColor: '#fff'},
 });
+
+export default CustomTable;

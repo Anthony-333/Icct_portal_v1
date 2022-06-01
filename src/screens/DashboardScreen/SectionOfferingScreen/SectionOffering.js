@@ -9,14 +9,15 @@ import React, {useEffect} from 'react';
 
 import CustomPicker from '../../../components/CustomPicker';
 import CustomTable from '../../../components/CustomTable';
+import Section from './courseItem';
+import TableItems from './tableItems';
 
 var height = Dimensions.get('window').height; //full width
 var width = Dimensions.get('window').width; //full width
 
 const SectionOffering = () => {
-
   return (
-    <View style={{backgroundColor: '#0067FF'}}>
+    <ScrollView style={{backgroundColor: '#0067FF'}}>
       <View>
         <View>
           <Text
@@ -43,9 +44,6 @@ const SectionOffering = () => {
             <View style={{width: width / 2}}>
               <Text style={{marginLeft: 20}}>School Year</Text>
               <CustomPicker
-                addStyle={{
-                  backgroundColor: '#F0F0F0',
-                }}
                 placeholder={'2021-2022'}
                 dropDownItem={[{label: '2021-2022', value: '2021-2022'}]}
                 disable={true}
@@ -68,9 +66,6 @@ const SectionOffering = () => {
             <View style={{width: width / 2}}>
               <Text style={{marginLeft: 20}}>Parent Section</Text>
               <CustomPicker
-                addStyle={{
-                  backgroundColor: 'white',
-                }}
                 placeholder={'Select Section'}
                 dropDownItem={[
                   {label: 'OLCA33A026', value: '1OLCA33A026'},
@@ -85,9 +80,6 @@ const SectionOffering = () => {
             <View style={{width: width / 2}}>
               <Text style={{marginLeft: 20}}>Year Level</Text>
               <CustomPicker
-                addStyle={{
-                  backgroundColor: 'white',
-                }}
                 placeholder={'Select Year'}
                 dropDownItem={[
                   {label: 'First Year', value: 'First Year'},
@@ -102,39 +94,9 @@ const SectionOffering = () => {
           <View style={{width: width}}>
             <Text style={{marginLeft: 20}}>Course</Text>
             <CustomPicker
-              addStyle={{
-                backgroundColor: 'white',
-              }}
               search={true}
               placeholder={'Select Course'}
-              dropDownItem={[
-                {
-                  label: 'ABA - ASSOCIATE IN BUSINESS ADMINISTRATION ',
-                  value: 'ABA - ASSOCIATE IN BUSINESS ADMINISTRATION ',
-                },
-                {
-                  label: 'AB_COMM - BACHELOR OF ARTS IN COMMUNICATION ',
-                  value: 'AB_COMM - BACHELOR OF ARTS IN COMMUNICATION  ',
-                },
-                {
-                  label: 'AB_ENGLISH - BACHELOR OF ARTS IN ENGLISH ',
-                  value: 'AB_ENGLISH - BACHELOR OF ARTS IN ENGLISH ',
-                },
-                {
-                  label: 'ACT - ASSOCIATE IN COMPUTER TECHNOLOGY ',
-                  value: 'ACT - ASSOCIATE IN COMPUTER TECHNOLOGY ',
-                },
-                {
-                  label: 'BECEd - BACHELOR IN EARLY CHILDHOOD EDUCATION ',
-                  value: 'BECEd - BACHELOR IN EARLY CHILDHOOD EDUCATION ',
-                },
-                {
-                  label:
-                    'BEED - BACHELOR IN ELEMENTARY EDUCATION  (Major in  Early Childhood Education)',
-                  value:
-                    'BEED - BACHELOR IN ELEMENTARY EDUCATION  (Major in  Early Childhood Education)',
-                },
-              ]}
+              dropDownItem={Section}
             />
           </View>
 
@@ -174,13 +136,35 @@ const SectionOffering = () => {
             </TouchableOpacity>
           </View>
 
-          <View style={{paddingHorizontal: 20, paddingTop: 20}}>
-            <Text style={{paddingBottom: 10}}>Section: OLCA333A026</Text>
-            <CustomTable />
+          <View style={{paddingTop: 20}}>
+            <Text style={{marginLeft: 15}}>Section: OLCA333A026</Text>
+            <CustomTable
+              tableHeadItems={[
+                'Subject Code',
+                'Subject Title',
+                'Lec',
+                'Lab',
+                'Tuition Units',
+                'Credited Units',
+                'Section',
+                'Professor',
+                'Slots',
+                'Day',
+                'Time',
+                'Room',
+              ]}
+              widthArrItems={[
+                100, 300, 50, 50, 60, 60, 150, 150, 50, 50, 150, 150,
+              ]}
+              rowDataItems={TableItems}
+            />
           </View>
+          <Text style={{fontWeight: 'bold', textAlign: 'center'}}>
+            More section will be added soon...
+          </Text>
         </ScrollView>
       </View>
-    </View>
+    </ScrollView>
   );
 };
 
