@@ -111,6 +111,24 @@ const Step2 = () => {
                 Next Step
               </Text>
             </TouchableOpacity>
+            <TouchableOpacity
+              style={{
+                position: 'absolute',
+                left: 0,
+                bottom: 0,
+                backgroundColor: '#0067FF',
+                borderRadius: 5,
+                marginHorizontal: 20,
+              }}>
+              <Text
+                style={{
+                  color: 'white',
+                  paddingVertical: 10,
+                  paddingHorizontal: 20,
+                }}>
+                Previous Step
+              </Text>
+            </TouchableOpacity>
           </ScrollView>
         </View>
       </ScrollView>
