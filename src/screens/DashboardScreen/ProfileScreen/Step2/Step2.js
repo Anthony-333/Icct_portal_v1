@@ -6,23 +6,16 @@ import {
   ScrollView,
   TouchableOpacity,
   Button,
-  Image,
-  Dimensions,
 } from 'react-native';
 
 import CollapsibleView from '../components/@eliav2/react-native-collapsible-view';
 
 import {useNavigation} from '@react-navigation/native';
 
-import ProgramInformation from '../components/Step1/ProgramInformation';
-import PersonalInformation from '../components/Step1/PersonalInformation';
-import HomeAddress from '../components/Step1/HomeAddress';
-import ComingSoon from '../../../../components/ComingSoonScreen/ComingSoon';
+import EducationInformation from '../components/Step2/EducationInformation';
 
-import {MaterialIcons} from '@expo/vector-icons';
 
-var height = Dimensions.get('window').height; //full width
-var width = Dimensions.get('window').width; //full width
+import LinearGradient from 'react-native-linear-gradient';
 
 const Step2 = () => {
   const navigation = useNavigation();
@@ -43,14 +36,37 @@ const Step2 = () => {
           Profile
         </Text>
       </View>
+
+      <View
+        style={{
+          position: 'absolute',
+          top: 88,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          height: 5,
+          zIndex: 99999,
+        }}>
+        <LinearGradient
+          colors={['white', 'transparent']}
+          angleCenter={{x: 0.5, y: 0.5}}
+          style={{
+            height: 30,
+            justifyContent: 'center',
+            alignItems: 'center',
+            borderTopLeftRadius: 30,
+            borderTopRightRadius: 30,
+          }}></LinearGradient>
+      </View>
       <ScrollView
         style={{
           backgroundColor: '#ffffff',
-          borderTopLeftRadius: 30,
-          borderTopRightRadius: 30,
+          borderTopLeftRadius: 25,
+          borderTopRightRadius: 25,
           marginTop: 30,
+   
         }}>
-        <View style={{marginTop: 20,}}>
+        <View style={{marginTop: 20, marginBottom: 60}}>
           <ScrollView
             contentContainerStyle={{
               height: '100%',
@@ -58,27 +74,6 @@ const Step2 = () => {
 
               marginBottom: 50,
             }}>
-            <View style={{flex: 1, justifyContent: 'center', width: width}}>
-              
-              <ComingSoon />
-            </View>
-
-            {/* <CollapsibleView
-              style={{borderWidth: 0}}
-              title={
-                <Text
-                  style={{
-                    color: '#000000',
-                    fontSize: 20,
-                    alignSelf: 'flex-start',
-                  }}>
-                  Program Information
-                </Text>
-              }
-              initExpanded>
-              <ProgramInformation />
-            </CollapsibleView>
-
             <CollapsibleView
               style={{borderWidth: 0}}
               title={
@@ -88,28 +83,34 @@ const Step2 = () => {
                     fontSize: 20,
                     alignSelf: 'flex-start',
                   }}>
-                  Personal Information
+                  Education Information
                 </Text>
               }
               initExpanded>
-              <PersonalInformation />
+              <EducationInformation />
             </CollapsibleView>
 
-            <CollapsibleView
-              style={{borderWidth: 0}}
-              title={
-                <Text
-                  style={{
-                    color: '#000000',
-                    fontSize: 20,
-                    alignSelf: 'flex-start',
-                  }}>
-                  Home Address
-                </Text>
-              }
-              initExpanded>
-              <HomeAddress />
-            </CollapsibleView> */}
+            
+
+          
+            <TouchableOpacity
+              style={{
+                position: 'absolute',
+                right: 0,
+                bottom: 0,
+                backgroundColor: '#0067FF',
+                borderRadius: 5,
+                marginHorizontal: 20,
+              }}>
+              <Text
+                style={{
+                  color: 'white',
+                  paddingVertical: 10,
+                  paddingHorizontal: 20,
+                }}>
+                Next Step
+              </Text>
+            </TouchableOpacity>
           </ScrollView>
         </View>
       </ScrollView>

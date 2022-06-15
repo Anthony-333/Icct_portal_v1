@@ -38,36 +38,36 @@ const Step1 = () => {
         </Text>
       </View>
 
-        <View
-          style={{
-            position: 'absolute',
-            top: 88,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            height:5,
-            zIndex: 99999,
-          }}>
-            <LinearGradient
+      <View
+        style={{
+          position: 'absolute',
+          top: 88,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          height: 5,
+          zIndex: 99999,
+        }}>
+        <LinearGradient
           colors={['white', 'transparent']}
           angleCenter={{x: 0.5, y: 0.5}}
           style={{
-          
             height: 30,
             justifyContent: 'center',
             alignItems: 'center',
             borderTopLeftRadius: 30,
             borderTopRightRadius: 30,
           }}></LinearGradient>
-          </View>
+      </View>
       <ScrollView
         style={{
           backgroundColor: '#ffffff',
           borderTopLeftRadius: 25,
           borderTopRightRadius: 25,
           marginTop: 30,
+   
         }}>
-        <View style={{marginTop: 20}}>
+        <View style={{marginTop: 20, marginBottom: 60}}>
           <ScrollView
             contentContainerStyle={{
               height: '100%',
@@ -122,6 +122,24 @@ const Step1 = () => {
               initExpanded>
               <HomeAddress />
             </CollapsibleView>
+            <TouchableOpacity
+              style={{
+                position: 'absolute',
+                right: 0,
+                bottom: 0,
+                backgroundColor: '#0067FF',
+                borderRadius: 5,
+                marginHorizontal: 20,
+              }}>
+              <Text
+                style={{
+                  color: 'white',
+                  paddingVertical: 10,
+                  paddingHorizontal: 20,
+                }}>
+                Next Step
+              </Text>
+            </TouchableOpacity>
           </ScrollView>
         </View>
       </ScrollView>
