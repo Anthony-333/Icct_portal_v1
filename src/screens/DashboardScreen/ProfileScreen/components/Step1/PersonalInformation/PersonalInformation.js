@@ -50,15 +50,11 @@ const PersonalInformation = () => {
             <Text style={{marginLeft: 10, color: 'gray'}}>Suffix</Text>
             <CustomInput name="Suffix" placeholder="Suffix" control={control} />
           </View>
-          <View style={{width: width / 4}}>
-            <Text style={{marginLeft: 10, color: 'gray'}}>Suffix</Text>
-            <CustomInput name="Suffix" placeholder="Suffix" control={control} />
-          </View>
           <View style={{width: width / 2, paddingHorizontal: 10}}>
             <DatePicker />
           </View>
         </View>
-        <View></View>
+      
       </View>
     </View>
   );

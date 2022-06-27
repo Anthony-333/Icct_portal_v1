@@ -16,7 +16,7 @@ import { useForm } from "react-hook-form";
 import { useRoute } from "@react-navigation/native";
 import { Auth } from "aws-amplify";
 
-import CustomImages from "../../components/CustomImages";
+
 
 var width = Dimensions.get("window").width; //full width
 var height = Dimensions.get("window").height; //full width
@@ -70,7 +70,7 @@ const SignUpScreen = () => {
     <ScrollView showsVerticalScrollIndicator={false}>
       <View style={styles.root}>
         <Image
-          source={CustomImages.confirmEmail}
+          source={require('../../components/Images/confirm_email.png')}
           style={{
             paddingVertical: 20,
             height: 200,

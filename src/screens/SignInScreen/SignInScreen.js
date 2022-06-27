@@ -16,7 +16,6 @@ import React, {useState} from 'react';
 //custom components
 import CustomInput from '../../components/CustomInput';
 import CustomButton from '../../components/CustomButton';
-import CustomImages from '../../components/CustomImages';
 import CustomColor from '../../components/CustomColor';
 
 import {useNavigation} from '@react-navigation/native';
@@ -61,7 +60,7 @@ const SignInScreen = () => {
     
     try {
       const user = await Auth.signIn(email, password);
-      navigation.navigate('OtpScreen', {user});
+      navigation.navigate('OtpScreen', {user, email, password});
     } catch (e) {
       Alert.alert('Error', e.message);
     }
@@ -80,7 +79,7 @@ const SignInScreen = () => {
     <ScrollView showsVerticalScrollIndicator={false}>
       <View style={styles.root}>
         <Image
-          source={CustomImages.icctLogo}
+          source={require('../../components/Images/icct_logo.png')}
           style={{
             marginTop: 70,
             marginBottom: 20,

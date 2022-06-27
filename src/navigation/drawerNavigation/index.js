@@ -188,7 +188,7 @@ const CustomDrawerContent = props => {
                 )
               }
             />
-            <DrawerItem
+            {/* <DrawerItem
               style={{borderRadius: 10}}
               label={({focused, color}) => (
                 <Text
@@ -224,7 +224,7 @@ const CustomDrawerContent = props => {
                   />
                 )
               }
-            />
+            /> */}
 
             <DrawerItem
               style={{borderRadius: 10}}

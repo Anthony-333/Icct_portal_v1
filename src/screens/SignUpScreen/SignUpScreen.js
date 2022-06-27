@@ -16,7 +16,7 @@ import {useNavigation} from '@react-navigation/native';
 import {useForm} from 'react-hook-form';
 import {Auth} from 'aws-amplify';
 
-import CustomImages from '../../components/CustomImages';
+
 
 // icons import
 import {Ionicons} from '@expo/vector-icons';
@@ -90,7 +90,7 @@ const SignUpScreen = () => {
     <ScrollView showsVerticalScrollIndicator={false}>
       <View style={styles.root}>
         <Image
-          source={CustomImages.signup}
+          source={require('../../components/Images/sign_up.png')}
           style={{
             paddingVertical: 20,
             height: 200,

@@ -14,8 +14,6 @@ import {useNavigation} from '@react-navigation/native';
 import {useForm} from 'react-hook-form';
 import {Auth} from 'aws-amplify';
 
-import CustomImages from '../../components/CustomImages';
-
 var width = Dimensions.get('window').width; //full width
 var height = Dimensions.get('window').height; //full width
 
@@ -52,7 +50,7 @@ const ForgotPasswordScreen = () => {
     <ScrollView showsVerticalScrollIndicator={false}>
       <View style={styles.root}>
         <Image
-          source={CustomImages.confirmEmail}
+          source={require('../../components/Images/forgot_password.png')}
           style={{
             paddingVertical: 20,
             height: 200,

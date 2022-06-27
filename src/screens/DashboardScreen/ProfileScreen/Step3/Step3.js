@@ -122,6 +122,7 @@ const Step3 = () => {
               <GuardianInformation />
             </CollapsibleView>
             <TouchableOpacity
+            onPress={() => navigation.navigate('Step4')}
               style={{
                 position: 'absolute',
                 right: 0,
@@ -140,6 +141,7 @@ const Step3 = () => {
               </Text>
             </TouchableOpacity>
             <TouchableOpacity
+            onPress={() => navigation.navigate('Step2')}
               style={{
                 position: 'absolute',
                 left: 0,

@@ -107,6 +107,7 @@ const Step4 = () => {
               </Text>
             </TouchableOpacity>
             <TouchableOpacity
+            onPress={() => navigation.navigate('Step3')}
               style={{
                 position: 'absolute',
                 left: 0,

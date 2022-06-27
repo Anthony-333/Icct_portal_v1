@@ -65,7 +65,6 @@ const Step1 = () => {
           borderTopLeftRadius: 25,
           borderTopRightRadius: 25,
           marginTop: 30,
-   
         }}>
         <View style={{marginTop: 20, marginBottom: 60}}>
           <ScrollView
@@ -123,6 +122,7 @@ const Step1 = () => {
               <HomeAddress />
             </CollapsibleView>
             <TouchableOpacity
+              onPress={() => navigation.navigate('Step2')}
               style={{
                 position: 'absolute',
                 right: 0,

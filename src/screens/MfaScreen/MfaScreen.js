@@ -15,8 +15,6 @@ import {useNavigation} from '@react-navigation/native';
 import {useRoute} from '@react-navigation/native';
 import {useForm} from 'react-hook-form';
 
-import CustomImages from '../../components/CustomImages';
-
 import {Auth} from 'aws-amplify';
 
 var width = Dimensions.get('window').width; //full width
@@ -28,13 +26,16 @@ const MfaScreen = () => {
   const route = useRoute();
 
   const user = route?.params?.user;
+  // var username = route?.params?.email;
+  // var password = route?.params?.password;
+
 
   const [loading, setLoading] = useState(false);
 
   const navigation = useNavigation();
 
   const onConfirmPressed = async data => {
-    try {
+
       if (loading) {
         return;
       }
@@ -42,21 +43,32 @@ const MfaScreen = () => {
       setLoading(true);
 
       try {
-        await Auth.confirmSignIn(user, data.code, 'SMS_MFA');
+        // await Auth.confirmSignIn(user, data.code, 'SMS_MFA');
 
-        // navigation.navigate('DrawerNavigation');
+       
       } catch (e) {
-        Alert.alert(e);
+        Alert.alert('error', e.message);
       }
       setLoading(false);
-    } catch (e) {
-      Alert.alert(e);
-    }
+
   };
 
-  const onResendPressed = () => {
-    console.warn('onResendPressed');
-  };
+  // const onResendPressed = async () => {
+  //   if (loading) {
+  //     return;
+  //   }
+
+  //   setLoading(true);
+
+  //    try {
+  //     const user = await Auth.signIn(username, password);
+  //     navigation.navigate('OtpScreen', {user, username , password});
+ 
+  //   } catch (e) {
+  //     Alert.alert('Error', e.message);
+  //   }
+  //   setLoading(false);
+  // };
 
   const onSignInPressed = () => {
     navigation.navigate('SignIn');
@@ -66,7 +78,7 @@ const MfaScreen = () => {
     <ScrollView showsVerticalScrollIndicator={false}>
       <View style={styles.root}>
         <Image
-          source={CustomImages.otp}
+          source={require('../../components/Images/otp.png')}
           style={{
             paddingVertical: 20,
             height: 200,
@@ -116,11 +128,11 @@ const MfaScreen = () => {
           onPress={handleSubmit(onConfirmPressed)}
         />
 
-        <CustomButton
+        {/* <CustomButton
           text="Resend Code"
           onPress={onResendPressed}
           type="SECONDARY"
-        />
+        /> */}
 
         <CustomButton
           text="Back to Sign in"

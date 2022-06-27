@@ -15,7 +15,6 @@ import {useForm} from 'react-hook-form';
 import {useRoute} from '@react-navigation/native';
 import {Auth} from 'aws-amplify';
 
-import CustomImages from '../../components/CustomImages';
 
 var width = Dimensions.get('window').width; //full width
 var height = Dimensions.get('window').height; //full width
@@ -52,7 +51,7 @@ const NewPasswordScreen = () => {
     <ScrollView showsVerticalScrollIndicator={false}>
       <View style={styles.root}>
         <Image
-          source={CustomImages.newPassword}
+          source={require('../../components/Images/new_password.png')}
           style={{
             paddingVertical: 20,
             height: 200,
