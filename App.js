@@ -14,6 +14,7 @@ import config from './src/aws-exports';
 import React, {useState, useEffect} from 'react';
 import AppIntroSlider from 'react-native-app-intro-slider';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import SplashScreen from 'react-native-splash-screen';
 
 LogBox.ignoreLogs(['Warning: ...']); // Ignore log notification by message
 LogBox.ignoreAllLogs(); //Ignore all log notifications
@@ -24,6 +25,10 @@ var width = Dimensions.get('window').width; //full width
 var height = Dimensions.get('window').height; //full width
 
 const App = () => {
+  useEffect(() => {
+    SplashScreen.hide();
+  }, []);
+
   const [isAppFirstLaunched, setIsAppFirstLaunched] = useState(null);
 
   useEffect(async () => {

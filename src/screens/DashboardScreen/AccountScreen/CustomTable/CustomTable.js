@@ -91,7 +91,7 @@ const CustomTable = ({tableHeadItems, widthArrItems, rowDataItems}) => {
 };
 
 const styles = StyleSheet.create({
-  container: {flex: 1, padding: 16, paddingTop: 10, backgroundColor: '#F0F0F0'},
+  container: {flex: 1, padding: 16, paddingTop: 10, backgroundColor: '#fff'},
   header: {height: 50, backgroundColor: '#0067FF'},
   headText: {
     color: '#fff',

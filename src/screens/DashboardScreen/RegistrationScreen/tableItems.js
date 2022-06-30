@@ -55,6 +55,20 @@ const TableItems = {
       '05:00PM-06:00PM',
       'VRM26',
     ],
+    row5: [
+      'OLPF1',
+      'EVENT DRIVEN PROGRAMMING (3/1)',
+      '3',
+      '1',
+      '4',
+      '4',
+      'BSIT-B Third Year-OLCA333A026',
+      '',
+      '80',
+      'S',
+      '05:00PM-06:00PM',
+      'VRM26',
+    ],
   };
   
   export default TableItems;
