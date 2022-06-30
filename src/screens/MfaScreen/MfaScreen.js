@@ -43,7 +43,7 @@ const MfaScreen = () => {
       setLoading(true);
 
       try {
-        // await Auth.confirmSignIn(user, data.code, 'SMS_MFA');
+        await Auth.confirmSignIn(user, data.code, 'SMS_MFA');
 
        
       } catch (e) {
