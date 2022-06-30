@@ -13,7 +13,10 @@ const SliderItem = ({item, index}) => {
           width: ITEM_WIDTH,
           height: 220,
         }}>
-        <Image source={{uri: item.imgUrl}} style={styles.image} />
+        <Image
+          source={item.imgUrl}
+          style={styles.image}
+        />
 
         {/* <Text style={styles.header}>{item.title}</Text>
       <Text style={styles.body}>{item.body}</Text> */}
