@@ -21,6 +21,7 @@ import {useNavigation} from '@react-navigation/native';
 var width = Dimensions.get('window').width; //full width
 var height = Dimensions.get('window').height; //full width
 
+
 const Dashboard = () => {
   const navigation = useNavigation();
   // const backAction = () => {
@@ -61,6 +62,7 @@ const Dashboard = () => {
               <CustomAvatar />
             </TouchableOpacity>
           </View>
+  
           <View
             style={{
               flexDirection: 'row',
@@ -141,6 +143,7 @@ const Dashboard = () => {
                   Second
                 </Text>
               </Text>
+
               <View
                 style={{
                   borderRadius: 5,

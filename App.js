@@ -15,6 +15,7 @@ import React, {useState, useEffect} from 'react';
 import AppIntroSlider from 'react-native-app-intro-slider';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import SplashScreen from 'react-native-splash-screen';
+import TipProvider from 'react-native-tip';
 
 LogBox.ignoreLogs(['Warning: ...']); // Ignore log notification by message
 LogBox.ignoreAllLogs(); //Ignore all log notifications
@@ -31,14 +32,17 @@ const App = () => {
 
   const [isAppFirstLaunched, setIsAppFirstLaunched] = useState(null);
 
-  useEffect(async () => {
-    const appData = await AsyncStorage.getItem('isAppFirstLaunched');
-    if (appData == null) {
-      setIsAppFirstLaunched(true);
-      AsyncStorage.setItem('isAppFirstLaunched', 'false');
-    } else {
-      setIsAppFirstLaunched(false);
+  useEffect(() => {
+    async function fetchAppData() {
+      const appData = await AsyncStorage.getItem('isAppFirstLaunched');
+      if (appData == null) {
+        setIsAppFirstLaunched(true);
+        AsyncStorage.setItem('isAppFirstLaunched', 'false');
+      } else {
+        setIsAppFirstLaunched(false);
+      }
     }
+    fetchAppData();
   }, []);
 
   const slides = [

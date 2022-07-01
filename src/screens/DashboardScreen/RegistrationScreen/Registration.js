@@ -4,6 +4,8 @@ import {
   Dimensions,
   ScrollView,
   TouchableOpacity,
+  Alert,
+  Linking,
 } from 'react-native';
 import React, {useEffect} from 'react';
 
@@ -14,6 +16,10 @@ var height = Dimensions.get('window').height; //full width
 var width = Dimensions.get('window').width; //full width
 
 const Registration = () => {
+  const ORF =
+    'https://icctportal-storage04211-dev.s3.ap-southeast-1.amazonaws.com/icct-file/Official+registration+and+Assessment+Form+SAMPLE+ONLY.pdf';
+  const Tentative =
+    'https://icctportal-storage04211-dev.s3.ap-southeast-1.amazonaws.com/icct-file/Official+registration+and+Assessment+Form+SAMPLE+ONLY.pdf';
   return (
     <ScrollView style={{backgroundColor: '#0067FF'}}>
       <View>
@@ -194,6 +200,7 @@ const Registration = () => {
           </View>
 
           <TouchableOpacity
+            onPress={() => Linking.openURL(Tentative)}
             style={{
               height: 'auto',
               backgroundColor: '#0067FF',
@@ -209,6 +216,7 @@ const Registration = () => {
           </TouchableOpacity>
 
           <TouchableOpacity
+            onPress={() => Linking.openURL(ORF)}
             style={{
               height: 'auto',
               backgroundColor: '#0067FF',
